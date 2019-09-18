@@ -13146,23 +13146,39 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Playing-for-Keeps---Defense-Scoring-System">Playing for Keeps - Defense Scoring System<a class="anchor-link" href="#Playing-for-Keeps---Defense-Scoring-System">&#182;</a></h1><h2 id="TL-DR">TL;DR<a class="anchor-link" href="#TL;DR">&#182;</a></h2><p>We made a D/ST scoring system originally that was designed to</p>
-<ol>
-<li>make the Defense more of a QB-like player on a GM's roster</li>
-<li>make low PA more valuable than the random D/ST TD</li>
-</ol>
-<p>Generally, all the analysis in the last 2 days has told us, yeah, the scoring system is doing that, but maybe a <em>little</em> too much.</p>
-<p>To help alleviate the league's apprehension and hopefully help make the meta of the position easier to manage (and less harmful if mis-managed), we're proposing a D/ST scoring change that changes the PA <strong>going forward</strong> to:</p>
+<h1 id="Playing-for-Keeps---Defense-Scoring-System">Playing for Keeps - Defense Scoring System<a class="anchor-link" href="#Playing-for-Keeps---Defense-Scoring-System">&#182;</a></h1><h2 id="TL;DR">TL;DR<a class="anchor-link" href="#TL;DR">&#182;</a></h2><p>The goal of the league was to have a fantasy league that was more like the NFL. To do this, we implemented new league rules, like trading draft picks and having keepers, and scoring rule changes. These scoring rules had 2 goals:</p>
 <ul>
-<li>0 PA : 20</li>
-<li>1-6 PA: 15</li>
-<li>7-13 PA: 10</li>
-<li>14-20 PA: 5</li>
-<li>21-26 PA: 0</li>
-<li>27-34 PA: -5</li>
-<li>35+ PA: -10</li>
+<li>Make fantasy scoring easier to keep track of while on the couch<ul>
+<li>QB passing touchdowns are 6 points (instead of 4)</li>
+<li>QB passing yards are a half point for every 10 yards (instead of .4 points per 10 yards)</li>
+<li>Kickers are 3 points for any field goal (instead of distance affecting points)</li>
+<li>Defenses start at 28 points. Every time the opponent scores a touchdown, your defense loses a touchdown (7 points) from the starting score.</li>
 </ul>
-<p>This will not <em>devalue</em> big games like what the Patriots did on Sunday, but this <em>will</em> make the max score less overall (Patriots would have gotten 47 instead of 55). Lastly, it <em>will</em> make defenses movement in points <em>less</em>, and high scoring games 21+ points, will be about as common as a WR getting a 21+ game.</p>
+</li>
+<li>Make fantasy points more equal to real life value<ul>
+<li>Increased scoring for QBs makes them the highest scoring, thus ‘most valuable’ player on the field</li>
+<li>Increased scoring for defenses made them similar in value to a QB, as defense is half of the NFL </li>
+</ul>
+</li>
+</ul>
+<p>For the most part, we felt we succeeded. Only modeling points allowed (instead of also having yards allowed) and increasing the score for points allowed has created a scoring model very similar to a QB model. However, in re-evaluating our defensive scoring, we have found it’s too volatile, aka really low scores and really big scores happen too frequently.</p>
+<p>To help fix this issue, we are proposing a D/ST scoring change that will change scoring for Points Allowed to the 
+below. NO PAST GAMES WILL BE AFFECTED.</p>
+<ul>
+<li>0 points allowed:     20 points (currently 28) </li>
+<li>1-6 points allowed:   15 points (currently 21)</li>
+<li>7-13 points allowed:  10 points (currently 14)</li>
+<li>14-20 points allowed: 5 points (currently 7)</li>
+<li>21-27 points allowed: 0 points (currently 0)</li>
+<li>28-34 points allowed: -5 points (currently -7)</li>
+<li>35+ points allowed:   -10 points (currently -14)</li>
+</ul>
+<p>After running 5 years’ worth of games through this model, (THANK YOU WILL) it has proven to give us 21+ point games from defenses about as often as a wide receiver would score 21+ point games (7% of the time).</p>
+<p>To put this in a real-life perspective:</p>
+<ul>
+<li>The highest scoring defensive game since 2012 (the Patriots last week) would score 47 in the new model, they scored 55 in the old model. They had 0 PA, 7 sacks, 4 interceptions, and 2 defensive touchdowns. </li>
+<li>The Ravens who played the Dolphins in week 1 would score 17 in the new model, they scored 21 in the old model. They had 10 PA, 3 sacks, 2 interceptions.</li>
+</ul>
 <p>You can look at the <a href="#stats-appendix">stats section</a> for all the info we have on the current D/ST scoring and the proposed one (including team by team stats on each system by season).</p>
 <h2 id="Last-Sunday">Last Sunday<a class="anchor-link" href="#Last-Sunday">&#182;</a></h2><p>The Patriot's Defensive performace last Sunday against Miami (week 2 of the 2019 season) was <em>the best</em> defensive performance in terms of Fantansy points since the Titans defense and special teams destroyed Jacksonville in 2012 week 17. The Titans and Patriots each scored 37 fantansy points (using standard scoring).</p>
 <p>However, the Patriots had a huge "one-up" on the Titans performance. Miami never scored. Titans had two special teams touchdowns that catipulted them to there 37 fantasy points (and 2 defense touchdowns off of 3 interceptions), however, Jacksonville still put 20 point on the board against the Titans defense.</p>
